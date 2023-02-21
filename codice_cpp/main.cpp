@@ -147,5 +147,15 @@ void riempi_con_vet(s_par *ptr_vet_par, int n_par)
 
 void podio(s_par *ptr_vet_par)
 {
+    int n_par=conta_record();
+    s_par t,  *p_v_p_ord=ptr_vet_par;
 
+    for(int i=0;i<n_par-1;i++)
+        for(int k=i+1;k<n_par;k++)
+            if((p_v_p_ord+i)->distanza>(p_v_p_ord+k)->distanza)
+            {
+                t=*(p_v_p_ord+k);
+                *(p_v_p_ord+k)=*(p_v_p_ord+i);
+                *(p_v_p_ord+i)=t;
+            }
 }
