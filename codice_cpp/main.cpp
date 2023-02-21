@@ -23,6 +23,7 @@ void genera_coordinate(s_par *ptr_vet_par, int n_par);
 void calcola_distanza(s_par *ptr_vet_par, int n_par);
 
 void podio(s_par *ptr_vet_par);
+void stampa_podio(s_par *p_v_p_ord);
 
 void menu()
 {
@@ -59,15 +60,6 @@ int main()
     return 0;
 }
 
-void gara(s_par *ptr_vet_par)
-{
-    int n_par=conta_record();
-    carica_vet_iniziale(ptr_vet_par);
-    genera_coordinate(ptr_vet_par, n_par);
-    calcola_distanza(ptr_vet_par, n_par);
-    riempi_con_vet(ptr_vet_par,n_par);
-}
-
 int conta_record()
 {
     int i=0;
@@ -81,6 +73,15 @@ int conta_record()
 
     fin.close();
     return i;
+}
+
+void gara(s_par *ptr_vet_par)
+{
+    int n_par=conta_record();
+    carica_vet_iniziale(ptr_vet_par);
+    genera_coordinate(ptr_vet_par, n_par);
+    calcola_distanza(ptr_vet_par, n_par);
+    riempi_con_vet(ptr_vet_par,n_par);
 }
 
 void carica_vet_iniziale(s_par *ptr_vet_par)
@@ -152,10 +153,27 @@ void podio(s_par *ptr_vet_par)
 
     for(int i=0;i<n_par-1;i++)
         for(int k=i+1;k<n_par;k++)
-            if((p_v_p_ord+i)->distanza>(p_v_p_ord+k)->distanza)
+            if((p_v_p_ord+i)->distanza<(p_v_p_ord+k)->distanza)
             {
                 t=*(p_v_p_ord+k);
                 *(p_v_p_ord+k)=*(p_v_p_ord+i);
                 *(p_v_p_ord+i)=t;
             }
+
+    stampa_podio(p_v_p_ord);
+}
+
+void stampa_podio(s_par *p_v_p_ord)
+{
+    cout<<"\n\tIl PRIMO POSTO va a "<<(p_v_p_ord+0)->cognome
+        <<" con il numero "<<(p_v_p_ord+0)->matricola
+        <<" che ha percorso "<<(p_v_p_ord+0)->distanza<<"km!"<<endl;
+
+    cout<<"\n\tIl SECONDO POSTO va a "<<(p_v_p_ord+1)->cognome
+        <<" con il numero "<<(p_v_p_ord+1)->matricola
+        <<" che ha percorso "<<(p_v_p_ord+1)->distanza<<"km!"<<endl;
+
+    cout<<"\n\tIl TERZO POSTO va a "<<(p_v_p_ord+2)->cognome
+        <<" con il numero "<<(p_v_p_ord+2)->matricola
+        <<" che ha percorso "<<(p_v_p_ord+2)->distanza<<"km!"<<endl;
 }
