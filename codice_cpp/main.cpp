@@ -165,15 +165,15 @@ void podio(s_par *ptr_vet_par)
 
 void stampa_podio(s_par *p_v_p_ord)
 {
-    cout<<"\n\tIl PRIMO POSTO va a "<<(p_v_p_ord+0)->cognome
+    cout<<"\n\tIl PRIMO POSTO va a"<<(p_v_p_ord+0)->cognome
         <<" con il numero "<<(p_v_p_ord+0)->matricola
         <<" che ha percorso "<<(p_v_p_ord+0)->distanza<<"km!"<<endl;
 
-    cout<<"\n\tIl SECONDO POSTO va a "<<(p_v_p_ord+1)->cognome
+    cout<<"\n\tIl SECONDO POSTO va a"<<(p_v_p_ord+1)->cognome
         <<" con il numero "<<(p_v_p_ord+1)->matricola
         <<" che ha percorso "<<(p_v_p_ord+1)->distanza<<"km!"<<endl;
 
-    cout<<"\n\tIl TERZO POSTO va a "<<(p_v_p_ord+2)->cognome
+    cout<<"\n\tIl TERZO POSTO va a"<<(p_v_p_ord+2)->cognome
         <<" con il numero "<<(p_v_p_ord+2)->matricola
         <<" che ha percorso "<<(p_v_p_ord+2)->distanza<<"km!"<<endl;
 }
