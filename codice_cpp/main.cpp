@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include <sstream>
 #include <cmath>
 #include <time.h>
@@ -11,10 +12,12 @@ using namespace std;
 struct s_par
 {
     string matricola, cognome;
-    int x1[30], y1[30], x2[30], y2[30];
+    int x[30], y[30], minuti;
     float distanza=0;
 };
 
+void visualizza_par(s_par *ptr_vet_par);
+void visualizza_ris(s_par *ptr_vet_par);
 void gara(s_par *ptr_vet_par);
 int conta_record();
 void carica_vet_iniziale(s_par *ptr_vet_par);
@@ -30,27 +33,37 @@ void menu()
     s_par vet_par[2000];
     s_par *ptr_vet_par=vet_par;
 
+    carica_vet_iniziale(ptr_vet_par);
+
     int scelta;
     do{
         cout<<endl<<"-=====- MENU -=====-"<<endl
-        <<"1 - Avvia gara"<<endl
-        <<"2 - Definisci podio"<<endl
-        <<"3 - Uscita"
+        <<"1 - Visualizza partecipanti"<<endl
+        <<"2 - Avvia gara"<<endl
+        <<"3 - Visualizza risultati"<<endl
+        <<"4 - Definisci podio"<<endl
+        <<"5 - Uscita"
         <<endl<<">>";
         cin>>scelta;
 
         switch(scelta)
         {
             case 1:
-                gara(ptr_vet_par);
+                visualizza_par(ptr_vet_par);
                 break;
             case 2:
-                podio(ptr_vet_par);
+                gara(ptr_vet_par);
                 break;
             case 3:
+                visualizza_ris(ptr_vet_par);
+                break;
+            case 4:
+                podio(ptr_vet_par);
+                break;
+            case 5:
                 cout<<"\nPROGRAMMA TERMINATO";
         }
-    }while(scelta!=3);
+    }while(scelta!=5);
 }
 
 int main()
@@ -75,10 +88,31 @@ int conta_record()
     return i;
 }
 
+void visualizza_par(s_par *ptr_vet_par)
+{
+    cout<<"\n\tI PARTECIPANTI DI QUESTA GARA DI KYTE SNOW BOARDING SONO : "
+        <<"\n\t---------------------------------------------------------";
+    for(int j=0;j<conta_record();j++)
+    {
+        cout<<"\n\t"<<setw(3)<<(ptr_vet_par+j)->matricola<<setw(20)<<(ptr_vet_par+j)->cognome;
+    }
+    cout<<endl;
+}
+
+void visualizza_ris(s_par *ptr_vet_par)
+{
+    cout<<"\n\tI RISULTATI DI QUESTA GARA DI KYTE SNOW BOARDING SONO : "
+        <<"\n\t---------------------------------------------------------";
+    for(int j=0;j<conta_record();j++)
+    {
+        cout<<"\n\t"<<setw(3)<<(ptr_vet_par+j)->matricola<<setw(20)<<(ptr_vet_par+j)->cognome<<setw(20)<<(ptr_vet_par+j)->distanza<<" km";
+    }
+    cout<<endl;
+}
+
 void gara(s_par *ptr_vet_par)
 {
     int n_par=conta_record();
-    carica_vet_iniziale(ptr_vet_par);
     genera_coordinate(ptr_vet_par, n_par);
     calcola_distanza(ptr_vet_par, n_par);
     riempi_con_vet(ptr_vet_par,n_par);
@@ -106,21 +140,28 @@ void carica_vet_iniziale(s_par *ptr_vet_par)
 void genera_coordinate(s_par *ptr_vet_par, int n_par)
 {
     for(int j=0; j<n_par; j++)
-        for(int i=0; i<30; i++)
+    {
+        (ptr_vet_par+j)->minuti=rand()%7+24;
+        (ptr_vet_par+j)->x[0]=0;
+        (ptr_vet_par+j)->y[0]=0;
+        for(int i=1; i<(ptr_vet_par+j)->minuti; i++)
         {
-            (ptr_vet_par+j)->x1[i]=rand()%101;
-            (ptr_vet_par+j)->y1[i]=rand()%101;
-            (ptr_vet_par+j)->x2[i]=rand()%101;
-            (ptr_vet_par+j)->y2[i]=rand()%101;
+            (ptr_vet_par+j)->x[i]=rand()%101;
+            (ptr_vet_par+j)->y[i]=rand()%101;
         }
+    }
 }
 
 void calcola_distanza(s_par *ptr_vet_par, int n_par)
 {
+    int xa,ya;
+
     for(int j=0; j<n_par; j++)
-        for(int i=0; i<30; i++)
-            (ptr_vet_par+j)->distanza+=sqrt(pow((ptr_vet_par+j)->x1[i]-(ptr_vet_par+j)->x2[i],2)+
-                                            pow((ptr_vet_par+j)->y1[i]-(ptr_vet_par+j)->y2[i],2));
+        for(int i=1; i<(ptr_vet_par+j)->minuti; i++)
+        {
+            (ptr_vet_par+j)->distanza+=sqrt(pow((ptr_vet_par+j)->x[i]-(ptr_vet_par+j)->x[i-1],2)+
+                                            pow((ptr_vet_par+j)->y[i]-(ptr_vet_par+j)->y[i-1],2));
+        }
 }
 
 void riempi_con_vet(s_par *ptr_vet_par, int n_par)
@@ -132,12 +173,12 @@ void riempi_con_vet(s_par *ptr_vet_par, int n_par)
         fout<<(ptr_vet_par+j)->matricola
         <<','<<(ptr_vet_par+j)->cognome
         <<',';
-        for(int i=0; i<30; i++)
+        for(int i=1; i<(ptr_vet_par+j)->minuti; i++)
         {
-            fout<<" ("<<(ptr_vet_par+j)->x1[i]
-            <<'-'<<(ptr_vet_par+j)->y1[i]
-            <<"; "<<(ptr_vet_par+j)->x2[i]
-            <<'-'<<(ptr_vet_par+j)->y2[i]<<"),";
+            fout<<" ("<<(ptr_vet_par+j)->x[i-1]
+            <<'-'<<(ptr_vet_par+j)->y[i-1]
+            <<"; "<<(ptr_vet_par+j)->x[i]
+            <<'-'<<(ptr_vet_par+j)->y[i]<<"),";
         }
         if(j<n_par-1)
             fout<<endl;
