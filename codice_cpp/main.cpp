@@ -5,7 +5,7 @@
 #include <cmath>
 #include <time.h>
 
-#define FILE_NAME "storico_partecipanti.txt"
+#define FILE_NAME "files/file_di_gara.txt"
 
 using namespace std;
 
@@ -13,9 +13,10 @@ struct s_par
 {
     string matricola, cognome;
     int x[30], y[30], minuti;
-    float distanza=0;
+    float distanza;
 };
 
+void pulisci_file();
 void visualizza_par(s_par *ptr_vet_par);
 void visualizza_ris(s_par *ptr_vet_par);
 void gara(s_par *ptr_vet_par);
@@ -24,7 +25,6 @@ void carica_vet_iniziale(s_par *ptr_vet_par);
 void riempi_con_vet(s_par *ptr_vet_par, int k);
 void genera_coordinate(s_par *ptr_vet_par, int n_par);
 void calcola_distanza(s_par *ptr_vet_par, int n_par);
-
 void podio(s_par *ptr_vet_par);
 void stampa_podio(s_par *p_v_p_ord);
 
@@ -32,6 +32,8 @@ void menu()
 {
     s_par vet_par[2000];
     s_par *ptr_vet_par=vet_par;
+
+    pulisci_file();
 
     carica_vet_iniziale(ptr_vet_par);
 
@@ -73,6 +75,19 @@ int main()
     return 0;
 }
 
+void pulisci_file()
+{
+    char var;
+    ofstream fout(FILE_NAME);
+        ifstream fin("files/lista_partecipanti.txt");
+        while(fin.get(var))
+        {
+            fout<<var;
+        }
+        fin.close();
+    fout.close();
+}
+
 int conta_record()
 {
     int i=0;
@@ -105,17 +120,22 @@ void visualizza_ris(s_par *ptr_vet_par)
         <<"\n\t---------------------------------------------------------";
     for(int j=0;j<conta_record();j++)
     {
-        cout<<"\n\t"<<setw(3)<<(ptr_vet_par+j)->matricola<<setw(20)<<(ptr_vet_par+j)->cognome<<setw(20)<<(ptr_vet_par+j)->distanza<<" km";
+        cout<<"\n\t"<<setw(3)<<(ptr_vet_par+j)->matricola<<setw(17)<<(ptr_vet_par+j)->cognome<<setw(17)<<(ptr_vet_par+j)->distanza<<" km"<<setw(13)<<(ptr_vet_par+j)->minuti<<" min";
     }
     cout<<endl;
 }
 
 void gara(s_par *ptr_vet_par)
 {
+    pulisci_file();
     int n_par=conta_record();
     genera_coordinate(ptr_vet_par, n_par);
     calcola_distanza(ptr_vet_par, n_par);
     riempi_con_vet(ptr_vet_par,n_par);
+
+    cout<<"\n\t------------------"
+        <<"\n\t| GARA TERMINATA |"
+        <<"\n\t------------------\n";
 }
 
 void carica_vet_iniziale(s_par *ptr_vet_par)
@@ -157,11 +177,14 @@ void calcola_distanza(s_par *ptr_vet_par, int n_par)
     int xa,ya;
 
     for(int j=0; j<n_par; j++)
+    {
+        (ptr_vet_par+j)->distanza=0;
         for(int i=1; i<(ptr_vet_par+j)->minuti; i++)
         {
             (ptr_vet_par+j)->distanza+=sqrt(pow((ptr_vet_par+j)->x[i]-(ptr_vet_par+j)->x[i-1],2)+
                                             pow((ptr_vet_par+j)->y[i]-(ptr_vet_par+j)->y[i-1],2));
         }
+    }
 }
 
 void riempi_con_vet(s_par *ptr_vet_par, int n_par)
