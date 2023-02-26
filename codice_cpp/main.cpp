@@ -184,6 +184,7 @@ void calcola_distanza(s_par *ptr_vet_par, int n_par)
             (ptr_vet_par+j)->distanza+=sqrt(pow((ptr_vet_par+j)->x[i]-(ptr_vet_par+j)->x[i-1],2)+
                                             pow((ptr_vet_par+j)->y[i]-(ptr_vet_par+j)->y[i-1],2));
         }
+        (ptr_vet_par+j)->distanza/=100;
     }
 }
 
@@ -194,14 +195,13 @@ void riempi_con_vet(s_par *ptr_vet_par, int n_par)
     for(int j=0;j<n_par;j++)
     {
         fout<<(ptr_vet_par+j)->matricola
-        <<','<<(ptr_vet_par+j)->cognome
-        <<',';
+        <<','<<(ptr_vet_par+j)->cognome;
         for(int i=1; i<(ptr_vet_par+j)->minuti; i++)
         {
-            fout<<" ("<<(ptr_vet_par+j)->x[i-1]
+            fout<<", ("<<(ptr_vet_par+j)->x[i-1]
             <<'-'<<(ptr_vet_par+j)->y[i-1]
             <<"; "<<(ptr_vet_par+j)->x[i]
-            <<'-'<<(ptr_vet_par+j)->y[i]<<"),";
+            <<'-'<<(ptr_vet_par+j)->y[i]<<")";
         }
         if(j<n_par-1)
             fout<<endl;
