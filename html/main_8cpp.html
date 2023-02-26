@@ -81,7 +81,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Lo scopo di questo programma e<code>far gareggiare un numero indefinito di partecipanti a una gara di kyte snowboarding. Vince chi percorre piu</code> chilometri, chi si portera` a casa la sfida?  
+<p>Lo scopo di questo programma è far gareggiare un numero indefinito di partecipanti a una gara di kyte snowboarding. Vince chi percorre più chilometri, chi si porterà a casa la sfida?  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;fstream&gt;</code><br />
@@ -93,7 +93,7 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__par.html">s_par</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">struttura del partecipante  <a href="structs__par.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structs__par.html" title="s_par e` la struttura del partecipante">s_par</a> e` la struttura del partecipante  <a href="structs__par.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
@@ -107,36 +107,47 @@ Functions</h2></td></tr>
 <tr class="memitem:a8c2941cd44453a9988c0bfa313e3ec94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8c2941cd44453a9988c0bfa313e3ec94">pulisci_file</a> ()</td></tr>
 <tr class="memdesc:a8c2941cd44453a9988c0bfa313e3ec94"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve per pulire file_di_gara, con coordinate, e renderlo come lista_partecipanti, quindi privo di coordinate  <br /></td></tr>
 <tr class="separator:a8c2941cd44453a9988c0bfa313e3ec94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c75988b86765b2400ee134c0a0f05c2"><td class="memItemLeft" align="right" valign="top"><a id="a0c75988b86765b2400ee134c0a0f05c2" name="a0c75988b86765b2400ee134c0a0f05c2"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>visualizza_par</b> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par)</td></tr>
+<tr class="memitem:a0c75988b86765b2400ee134c0a0f05c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0c75988b86765b2400ee134c0a0f05c2">visualizza_par</a> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par)</td></tr>
+<tr class="memdesc:a0c75988b86765b2400ee134c0a0f05c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a stampare in maniera seriale ogni partecipante con matricola e cognome  <br /></td></tr>
 <tr class="separator:a0c75988b86765b2400ee134c0a0f05c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6875868fea9f107655223d5cd3c7d3d3"><td class="memItemLeft" align="right" valign="top"><a id="a6875868fea9f107655223d5cd3c7d3d3" name="a6875868fea9f107655223d5cd3c7d3d3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>visualizza_ris</b> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par)</td></tr>
+<tr class="memitem:a6875868fea9f107655223d5cd3c7d3d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6875868fea9f107655223d5cd3c7d3d3">visualizza_ris</a> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par)</td></tr>
+<tr class="memdesc:a6875868fea9f107655223d5cd3c7d3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a stampare in maniera seriale ogni partecipante con matricola, cognome, distanza percorsa e minuti di gara  <br /></td></tr>
 <tr class="separator:a6875868fea9f107655223d5cd3c7d3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ae196bd7adb059f1aa406ead6244497"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a0ae196bd7adb059f1aa406ead6244497">gara</a> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par)</td></tr>
+<tr class="memdesc:a0ae196bd7adb059f1aa406ead6244497"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a gestire al meglio la seconda voce del menu, quindi per far avvenire l'intero svolgimento della gara  <br /></td></tr>
 <tr class="separator:a0ae196bd7adb059f1aa406ead6244497"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdce46dda0ad3258f52054fe3d011e78"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#afdce46dda0ad3258f52054fe3d011e78">conta_record</a> ()</td></tr>
-<tr class="memdesc:afdce46dda0ad3258f52054fe3d011e78"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a contare il numero di righe (quindi di partecipanti) all'interno del file  <br /></td></tr>
-<tr class="separator:afdce46dda0ad3258f52054fe3d011e78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9821fd690a248986bfd6601af5988e11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a9821fd690a248986bfd6601af5988e11">conta_record</a> ()</td></tr>
+<tr class="memdesc:a9821fd690a248986bfd6601af5988e11"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a contare il numero di righe (quindi di partecipanti) all'interno del file  <br /></td></tr>
+<tr class="separator:a9821fd690a248986bfd6601af5988e11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15374ccc8908cf50099c5766d3eec318"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a15374ccc8908cf50099c5766d3eec318">carica_vet_iniziale</a> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par)</td></tr>
+<tr class="memdesc:a15374ccc8908cf50099c5766d3eec318"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a caricare il vettore di tipo <a class="el" href="structs__par.html" title="s_par e` la struttura del partecipante">s_par</a> con matricola e cognome prelevati dal file  <br /></td></tr>
 <tr class="separator:a15374ccc8908cf50099c5766d3eec318"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4c501ec21b8dba054365f9a1eed7382"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ad4c501ec21b8dba054365f9a1eed7382">riempi_con_vet</a> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par, int k)</td></tr>
-<tr class="separator:ad4c501ec21b8dba054365f9a1eed7382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b8e899280a2e706063b78655bb04c5e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a8b8e899280a2e706063b78655bb04c5e">riempi_con_vet</a> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par, int n_par)</td></tr>
+<tr class="memdesc:a8b8e899280a2e706063b78655bb04c5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a riempire file_di_gara con anche le coordinate di ogni partecipanti, oltre matricola e cognome  <br /></td></tr>
+<tr class="separator:a8b8e899280a2e706063b78655bb04c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a169a2c35b51a999da445589ae6ec629e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a169a2c35b51a999da445589ae6ec629e">genera_coordinate</a> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par, int n_par)</td></tr>
+<tr class="memdesc:a169a2c35b51a999da445589ae6ec629e"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a generare casualmente le coordinate dalle quali sono passati i partecipanti alla gara  <br /></td></tr>
 <tr class="separator:a169a2c35b51a999da445589ae6ec629e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4ec33267af7e5023fbf8a163c0818d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ab4ec33267af7e5023fbf8a163c0818d3">calcola_distanza</a> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par, int n_par)</td></tr>
+<tr class="memdesc:ab4ec33267af7e5023fbf8a163c0818d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a calcolare la distanza percorsa dai partecipanti, tenendo conto ovviamnete delle coordinate  <br /></td></tr>
 <tr class="separator:ab4ec33267af7e5023fbf8a163c0818d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a837dd6ea58b7b54cb520ca32dbb90932"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a837dd6ea58b7b54cb520ca32dbb90932">podio</a> (<a class="el" href="structs__par.html">s_par</a> *ptr_vet_par)</td></tr>
+<tr class="memdesc:a837dd6ea58b7b54cb520ca32dbb90932"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a gestire al meglio la quarta voce del menu, quindi per la realizzazione del podio  <br /></td></tr>
 <tr class="separator:a837dd6ea58b7b54cb520ca32dbb90932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dc37118105428b175392bad0160c33e"><td class="memItemLeft" align="right" valign="top"><a id="a6dc37118105428b175392bad0160c33e" name="a6dc37118105428b175392bad0160c33e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>stampa_podio</b> (<a class="el" href="structs__par.html">s_par</a> *p_v_p_ord)</td></tr>
+<tr class="memitem:a6dc37118105428b175392bad0160c33e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a6dc37118105428b175392bad0160c33e">stampa_podio</a> (<a class="el" href="structs__par.html">s_par</a> *p_v_p_ord)</td></tr>
+<tr class="memdesc:a6dc37118105428b175392bad0160c33e"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione serve a stampare i primi tre classificati con matricola, cognome e distanza  <br /></td></tr>
 <tr class="separator:a6dc37118105428b175392bad0160c33e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51af30a60f9f02777c6396b8247e356f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#a51af30a60f9f02777c6396b8247e356f">main</a> ()</td></tr>
+<tr class="memitem:a51af30a60f9f02777c6396b8247e356f"><td class="memItemLeft" align="right" valign="top"><a id="a51af30a60f9f02777c6396b8247e356f" name="a51af30a60f9f02777c6396b8247e356f"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+<tr class="memdesc:a51af30a60f9f02777c6396b8247e356f"><td class="mdescLeft">&#160;</td><td class="mdescRight">questa funzione e` quella principale <br /></td></tr>
 <tr class="separator:a51af30a60f9f02777c6396b8247e356f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Lo scopo di questo programma e<code>far gareggiare un numero indefinito di partecipanti a una gara di kyte snowboarding. Vince chi percorre piu</code> chilometri, chi si portera` a casa la sfida? </p>
+<div class="textblock"><p>Lo scopo di questo programma è far gareggiare un numero indefinito di partecipanti a una gara di kyte snowboarding. Vince chi percorre più chilometri, chi si porterà a casa la sfida? </p>
 <dl class="section author"><dt>Author</dt><dd>Gennaro Russo </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>21/02/2023 </dd>
+<dd>
+27/02/2023 </dd></dl>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ab4ec33267af7e5023fbf8a163c0818d3" name="ab4ec33267af7e5023fbf8a163c0818d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab4ec33267af7e5023fbf8a163c0818d3">&#9670;&#160;</a></span>calcola_distanza()</h2>
@@ -163,6 +174,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stampa_podio</b> (<a 
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>questa funzione serve a calcolare la distanza percorsa dai partecipanti, tenendo conto ovviamnete delle coordinate </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr_vet_par</td><td></td></tr>
+    <tr><td class="paramname">n_par</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <p>ciclo for che scorre su tutti i partecipanti</p>
 <p>qui si riempie il campo distanza con lo 0 per resettare la distanza ogni volta che si riavvia la gara</p>
 <p>ciclo for che scorre su tutte le coordinate dei vari partecipanti</p>
@@ -187,16 +207,25 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stampa_podio</b> (<a 
       </table>
 </div><div class="memdoc">
 
+<p>questa funzione serve a caricare il vettore di tipo <a class="el" href="structs__par.html" title="s_par e` la struttura del partecipante">s_par</a> con matricola e cognome prelevati dal file </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr_vet_par</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>j e` una variabile int che serve per puntare le celle all'interno del puntatore di vettore</p>
+
 </div>
 </div>
-<a id="afdce46dda0ad3258f52054fe3d011e78" name="afdce46dda0ad3258f52054fe3d011e78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdce46dda0ad3258f52054fe3d011e78">&#9670;&#160;</a></span>conta_record()</h2>
+<a id="a9821fd690a248986bfd6601af5988e11" name="a9821fd690a248986bfd6601af5988e11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9821fd690a248986bfd6601af5988e11">&#9670;&#160;</a></span>conta_record()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">n_par e una variabile int alla quale viene assegnato il valore di conta_record </td>
+          <td class="memname">int conta_record </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -205,6 +234,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stampa_podio</b> (<a 
 </div><div class="memdoc">
 
 <p>questa funzione serve a contare il numero di righe (quindi di partecipanti) all'interno del file </p>
+<p>i e` una variabile int contatore per le righe</p>
 
 </div>
 </div>
@@ -223,6 +253,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stampa_podio</b> (<a 
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>questa funzione serve a gestire al meglio la seconda voce del menu, quindi per far avvenire l'intero svolgimento della gara </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr_vet_par</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>n_par e` una variabile int alla quale viene assegnato il valore di <a class="el" href="main_8cpp.html#a9821fd690a248986bfd6601af5988e11" title="questa funzione serve a contare il numero di righe (quindi di partecipanti) all&#39;interno del file">conta_record()</a></p>
 
 </div>
 </div>
@@ -251,30 +290,21 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stampa_podio</b> (<a 
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>questa funzione serve a generare casualmente le coordinate dalle quali sono passati i partecipanti alla gara </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr_vet_par</td><td></td></tr>
+    <tr><td class="paramname">n_par</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <p>ciclo for che scorre su tutti i partecipanti</p>
 <p>qui si riempie il campo minuti con un numero casuale da 24 a 30</p>
 <p>qui si riempie la prima cella dei vettori x e y con 0 per far partire il partecipante dall'inizio del percorso</p>
 <p>ciclo for che serve a generare le coordinate dal primo minuto fino all'uiltimo relativo di ogni partecipante</p>
 <p>qui si riempie il campo x con un numero casuale da 0 a 100</p>
 <p>qui si riempie il campo y con un numero casuale da 0 a 100</p>
-
-</div>
-</div>
-<a id="a51af30a60f9f02777c6396b8247e356f" name="a51af30a60f9f02777c6396b8247e356f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51af30a60f9f02777c6396b8247e356f">&#9670;&#160;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">main </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>\brief questa funzione e quella principale </p>
 
 </div>
 </div>
@@ -294,6 +324,16 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stampa_podio</b> (<a 
       </table>
 </div><div class="memdoc">
 
+<p>questa funzione serve a gestire al meglio la quarta voce del menu, quindi per la realizzazione del podio </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr_vet_par</td><td></td></tr>
+    <tr><td class="paramname">n_par</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>n_par e` una variabile int alla quale viene assegnato il valore di <a class="el" href="main_8cpp.html#a9821fd690a248986bfd6601af5988e11" title="questa funzione serve a contare il numero di righe (quindi di partecipanti) all&#39;interno del file">conta_record()</a></p>
+
 </div>
 </div>
 <a id="a8c2941cd44453a9988c0bfa313e3ec94" name="a8c2941cd44453a9988c0bfa313e3ec94"></a>
@@ -312,11 +352,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stampa_podio</b> (<a 
 </div><div class="memdoc">
 
 <p>questa funzione serve per pulire file_di_gara, con coordinate, e renderlo come lista_partecipanti, quindi privo di coordinate </p>
+<p>var e` una variabiale char e serve come appoggio per il trasferimento di informazioni tra un file ed un altro</p>
 
 </div>
 </div>
-<a id="ad4c501ec21b8dba054365f9a1eed7382" name="ad4c501ec21b8dba054365f9a1eed7382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad4c501ec21b8dba054365f9a1eed7382">&#9670;&#160;</a></span>riempi_con_vet()</h2>
+<a id="a8b8e899280a2e706063b78655bb04c5e" name="a8b8e899280a2e706063b78655bb04c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b8e899280a2e706063b78655bb04c5e">&#9670;&#160;</a></span>riempi_con_vet()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +372,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stampa_podio</b> (<a 
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>k</em>&#160;</td>
+          <td class="paramname"><em>n_par</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -340,12 +381,99 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>stampa_podio</b> (<a 
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>questa funzione serve a riempire file_di_gara con anche le coordinate di ogni partecipanti, oltre matricola e cognome </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr_vet_par</td><td></td></tr>
+    <tr><td class="paramname">n_par</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 <p>ciclo for che scorre su tutti i partecipanti</p>
 <p>qui vengono scritte nel file matricola e cognome separati da una vrigola</p>
 <p>ciclo for che scorre su tutte le coordinate dei vari partecipanti</p>
 <p>qui vengono scritte nel file tutte le coordinate dei vari punti.</p>
 <p>le coordinate sono separate fra di loro con un trattino, i punti con un punto e virgola e i segmenti con le parentesi</p>
 <p>qui va a capo ogni volte che finisce di scrivere le informazioni di un partecipante, tranne se e` l'ultimo</p>
+
+</div>
+</div>
+<a id="a6dc37118105428b175392bad0160c33e" name="a6dc37118105428b175392bad0160c33e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc37118105428b175392bad0160c33e">&#9670;&#160;</a></span>stampa_podio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void stampa_podio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structs__par.html">s_par</a> *&#160;</td>
+          <td class="paramname"><em>p_v_p_ord</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>questa funzione serve a stampare i primi tre classificati con matricola, cognome e distanza </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_v_p_ord</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c75988b86765b2400ee134c0a0f05c2" name="a0c75988b86765b2400ee134c0a0f05c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c75988b86765b2400ee134c0a0f05c2">&#9670;&#160;</a></span>visualizza_par()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void visualizza_par </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structs__par.html">s_par</a> *&#160;</td>
+          <td class="paramname"><em>ptr_vet_par</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>questa funzione serve a stampare in maniera seriale ogni partecipante con matricola e cognome </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr_vet_par</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6875868fea9f107655223d5cd3c7d3d3" name="a6875868fea9f107655223d5cd3c7d3d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6875868fea9f107655223d5cd3c7d3d3">&#9670;&#160;</a></span>visualizza_ris()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void visualizza_ris </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structs__par.html">s_par</a> *&#160;</td>
+          <td class="paramname"><em>ptr_vet_par</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>questa funzione serve a stampare in maniera seriale ogni partecipante con matricola, cognome, distanza percorsa e minuti di gara </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr_vet_par</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

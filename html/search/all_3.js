@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['podio_0',['podio',['../main_8cpp.html#a837dd6ea58b7b54cb520ca32dbb90932',1,'main.cpp']]],
-  ['pulisci_5ffile_1',['pulisci_file',['../main_8cpp.html#a8c2941cd44453a9988c0bfa313e3ec94',1,'main.cpp']]]
+  ['main_0',['main',['../main_8cpp.html#a51af30a60f9f02777c6396b8247e356f',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['matricola_2',['matricola',['../structs__par.html#a753a2324c5128003efb9b47d0ed626cf',1,'s_par']]],
+  ['minuti_3',['minuti',['../structs__par.html#ab605e2db16ada6c8ba5438b3c637234b',1,'s_par']]]
 ];

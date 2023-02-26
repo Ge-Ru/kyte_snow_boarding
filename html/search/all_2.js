@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a51af30a60f9f02777c6396b8247e356f',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['gara_0',['gara',['../main_8cpp.html#a0ae196bd7adb059f1aa406ead6244497',1,'main.cpp']]],
+  ['genera_5fcoordinate_1',['genera_coordinate',['../main_8cpp.html#a169a2c35b51a999da445589ae6ec629e',1,'main.cpp']]]
 ];
