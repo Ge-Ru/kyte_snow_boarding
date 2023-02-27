@@ -75,13 +75,16 @@ void menu()
     //! \brief scelta e` una varabile int che mi serve per selezionare la voce nel menu
     int scelta;
     do{
-        cout<<endl<<"-=====- MENU -=====-"<<endl
-        <<"1 - Visualizza partecipanti"<<endl
-        <<"2 - Avvia gara"<<endl
-        <<"3 - Visualizza risultati"<<endl
-        <<"4 - Definisci podio"<<endl
-        <<"5 - Uscita"
-        <<endl<<">>";
+        cout<<endl<<"--=============================--"<<endl
+                  <<"||  GARA DI KYTE SNOWBOARDING  ||"<<endl
+                  <<"--=============================--"<<endl
+                  <<"|| 1 - Visualizza partecipanti ||"<<endl
+                  <<"|| 2 - Avvia gara              ||"<<endl
+                  <<"|| 3 - Visualizza risultati    ||"<<endl
+                  <<"|| 4 - Definisci podio         ||"<<endl
+                  <<"|| 5 - Uscita                  ||"<<endl
+                  <<"--=============================--"
+                  <<endl<<">>";
         cin>>scelta;
 
         switch(scelta)
@@ -166,13 +169,16 @@ int conta_record()
 */
 void visualizza_par(s_par *ptr_vet_par)
 {
-    cout<<"\n\tI PARTECIPANTI DI QUESTA GARA DI KYTE SNOW BOARDING SONO : "
-        <<"\n\t----------------------------------------------------------";
+    cout<<"\n\t--------------------------------------------------------------"
+        <<"\n\t| I PARTECIPANTI DI QUESTA GARA DI KYTE SNOW BOARDING SONO : |"
+        <<"\n\t--------------------------------------------------------------"
+        <<"\n\t| "<<setw(18)<<"MATRICOLA"<<setw(11)<<"|"<<setw(19)<<"COGNOME"<<setw(12)<<"|"
+        <<"\n\t--------------------------------------------------------------";
     for(int j=0;j<conta_record();j++)
     {
-        cout<<"\n\t"<<setw(3)<<(ptr_vet_par+j)->matricola<<setw(20)<<(ptr_vet_par+j)->cognome;
+        cout<<"\n\t| "<<setw(15)<<(ptr_vet_par+j)->matricola<<setw(14)<<"|"<<setw(19)<<(ptr_vet_par+j)->cognome<<setw(12)<<"|";
     }
-    cout<<endl;
+    cout<<"\n\t--------------------------------------------------------------"<<endl;
 }
 
 /*!
@@ -182,13 +188,16 @@ void visualizza_par(s_par *ptr_vet_par)
 */
 void visualizza_ris(s_par *ptr_vet_par)
 {
-    cout<<"\n\tI RISULTATI DI QUESTA GARA DI KYTE SNOW BOARDING SONO : "
-        <<"\n\t---------------------------------------------------------";
+    cout<<"\n\t-----------------------------------------------------------"
+        <<"\n\t| I RISULTATI DI QUESTA GARA DI KYTE SNOW BOARDING SONO : |"
+        <<"\n\t-----------------------------------------------------------"
+        <<"\n\t|  MATRICOLA  |"<<setw(12)<<"COGNOME"<<setw(6)<<"|"<<"   DISTANZA   |  MINUTI  |"
+        <<"\n\t-----------------------------------------------------------";
     for(int j=0;j<conta_record();j++)
     {
-        cout<<"\n\t"<<setw(3)<<(ptr_vet_par+j)->matricola<<setw(17)<<(ptr_vet_par+j)->cognome<<setw(17)<<(ptr_vet_par+j)->distanza<<" km"<<setw(13)<<(ptr_vet_par+j)->minuti<<" min";
+        cout<<"\n\t| "<<setw(7)<<(ptr_vet_par+j)->matricola<<setw(6)<<"|"<<setw(12)<<(ptr_vet_par+j)->cognome<<setw(6)<<"|"<<setw(9)<<(ptr_vet_par+j)->distanza<<" km  |"<<setw(4)<<(ptr_vet_par+j)->minuti<<" min  |";
     }
-    cout<<endl;
+    cout<<"\n\t-----------------------------------------------------------"<<endl;
 }
 
 /*!
@@ -364,15 +373,17 @@ void podio(s_par *ptr_vet_par)
 */
 void stampa_podio(s_par *p_v_p_ord)
 {
-    cout<<"\n\tIl PRIMO POSTO va a"<<(p_v_p_ord+0)->cognome
-        <<" con il numero "<<(p_v_p_ord+0)->matricola
-        <<" che ha percorso "<<(p_v_p_ord+0)->distanza<<"km!"<<endl;
-
-    cout<<"\n\tIl SECONDO POSTO va a"<<(p_v_p_ord+1)->cognome
-        <<" con il numero "<<(p_v_p_ord+1)->matricola
-        <<" che ha percorso "<<(p_v_p_ord+1)->distanza<<"km!"<<endl;
-
-    cout<<"\n\tIl TERZO POSTO va a"<<(p_v_p_ord+2)->cognome
-        <<" con il numero "<<(p_v_p_ord+2)->matricola
-        <<" che ha percorso "<<(p_v_p_ord+2)->distanza<<"km!"<<endl;
+    cout<<"\n\t"<<setw(26)<<(p_v_p_ord+0)->cognome
+        <<"\n\t"<<setw(23)<<(p_v_p_ord+0)->matricola
+        <<"\n\t"<<setw(24)<<(p_v_p_ord+0)->distanza<<"km"
+        <<"\n\t"<<setw(12)<<(p_v_p_ord+1)->cognome<<"  ---------------"
+        <<"\n\t"<<setw(9)<<(p_v_p_ord+1)->matricola<<"     |             |"
+        <<"\n\t"<<setw(10)<<(p_v_p_ord+1)->distanza<<"km  |      1      |"
+        <<"\n\t--------------|             |"<<setw(11)<<(p_v_p_ord+2)->cognome
+        <<"\n\t|             |             |"<<setw(8)<<(p_v_p_ord+2)->matricola
+        <<"\n\t|      2      |             |"<<setw(9)<<(p_v_p_ord+2)->distanza<<"km"
+        <<"\n\t|             |             |--------------"
+        <<"\n\t|             |             |      3      |"
+        <<"\n\t-------------------------------------------"
+        <<endl;
 }
